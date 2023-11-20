@@ -8,13 +8,13 @@
 
 <p>
   <b>CSE-301: Combinatorial Optimization </b><br>
-  Here is all codes in C language. These codes are the implementation of searching & sorting, data structure like linked list, stack, queue, tree, graph".
+  Here is all codes in C++ language. These codes include Greedy Algorithm, Dynamic Programming, Graph Algorithm, Network Flow, String Matching etc".
 </p>  
 
 <br>
 <p>
   <b>SE-306: Object Oriented Concepts-II </b><br>
-  Here is all codes in Java language. These codes are the basic of Object Oriented Programming in Java.
+  Here is all codes in Java language. These codes are the advanced Object Oriented Concepts in Java including Java Collection Framework, Java File IO, Java Exception Handling, Java Generics, Java Thread and also Java Reflection.
 </p>  
 
 <br>
