@@ -1,0 +1,5 @@
+package exceptionhandling;
+
+public class CustomException {
+
+}
