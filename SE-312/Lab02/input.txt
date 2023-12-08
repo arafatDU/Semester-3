@@ -1,0 +1,112 @@
+3
+A B C
+2
+0 1
+A B A
+B C A
+C C A
+A
+C
+010100
+
+
+
+1
+A
+2
+A B
+1
+A
+1
+B
+0
+1
+C
+1
+C
+0
+0
+
+
+3
+2
+1
+a b c
+0 1
+a
+c
+2
+a
+b
+1
+a
+0
+1
+c
+0
+0
+
+#include <stdio.h>
+#include <stdbool.h>
+
+bool isSingleLineComment(const char *line) {
+    while (*line) {
+        if (*line == '/' && *(line + 1) == '/')
+            return true;
+        if (*line == '\n')
+            return false;
+        line++;
+    }
+    return false;
+}
+
+bool isMultiLineCommentStart(const char *line) {
+    while (*line) {
+        if (*line == '/' && *(line + 1) == '*')
+            return true;
+        if (*line != ' ' && *line != '\t')
+            return false;
+        line++;
+    }
+    return false;
+}
+
+bool isMultiLineCommentEnd(const char *line) {
+    while (*line) {
+        if (*line == '*' && *(line + 1) == '/')
+            return true;
+        line++;
+    }
+    return false;
+}
+
+int main() {
+    FILE *file = fopen("test_code.c", "r");
+    if (file == NULL) {
+        perror("Error opening file");
+        return 1;
+    }
+
+    char buffer[256];
+    bool inMultiLineComment = false;
+
+    while (fgets(buffer, sizeof(buffer), file)) {
+        if (inMultiLineComment) {
+            if (isMultiLineCommentEnd(buffer)) {
+                inMultiLineComment = false;
+            }
+        } else {
+            if (isSingleLineComment(buffer)) {
+                printf("Single-line comment found: %s", buffer);
+            } else if (isMultiLineCommentStart(buffer)) {
+                inMultiLineComment = true;
+                if (!isMultiLineCommentEnd(buffer)) {
+                    printf("Multi-line comment start: %s", buffer);
+                }
+            }
+        }
+    }
+
+    fclose(file);
+    return 0;
+}
