@@ -1,0 +1,11 @@
+9
+Dhaka Gazipur 3
+Dhaka Tangail 8
+Gazipur Narayanganj 1
+Gazipur Cumilla 7
+Dhaka Cumilla -4
+Tangail Gazipur 4
+Narayanganj Dhaka 2
+Narayanganj Tangail -5
+Cumilla Narayanganj 6
+Dhaka Narayanganj

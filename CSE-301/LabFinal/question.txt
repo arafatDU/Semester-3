@@ -1,0 +1,83 @@
+Suppose you love to spread rumor. You are given a task to spread a rumor among all IIT students. You know that there are n students in IIT. Some studensts are best friends to each other, and they always share information they got. Also, you know that you can motivate each student by giving an incentive so he/she starts spreading the rumor; i-th student wants c(i) chocolated in exchange for spreading the rumor. When a student hears the rumor, he/she tells it to all his/her best friendsm and they start spreading the rumor to their best friends for free and so on.
+
+The task is finished when all n students in IIT know the rumor. What is the minimum number of chocolates you need to spend in order to finish the task:
+
+Take a look at the notes if you think you haven't understood.
+
+Input:
+The first line contains two integer n and m - the number of studenst in IIT and the number of pairs of best friends. 
+The second line contains n integer numbers c(i) - the number of chocolates i-th student asks to start spreading the rumor.
+The m lines follow, each containing a pair of numbers(x(i), y(i)) which represent that students x(i) and y(i) are best friends. It is guranteed that each pair is listd at most once.
+
+Output: 
+Print one number- the minimum number of chocolates you have to spend in order to finish the task.
+
+Examples:
+Input:
+5 2
+2 5 3 4 8
+1 4
+4 5
+Output:
+10
+
+Input:
+10 0
+1 2 3 4 5 6 7 8 9 10
+Output:
+55
+
+Input:
+10 5
+1 6 2 7 3 8 4 9 5 10
+1 2
+3 4
+5 6
+7 8
+9 10
+
+Note: In first example the best decision is to give incentive to the first student, he will spread the rumor to fourth and fourth will spread it to fifth.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input:
+5 2
+2 5 3 4 8
+1 4
+4 5
+Output:
+10
+
+Input:
+10 0
+1 2 3 4 5 6 7 8 9 10
+Output:
+55
+
+Input:
+10 5
+1 6 2 7 3 8 4 9 5 10
+1 2
+3 4
+5 6
+7 8
+9 10
+
+
+5 4
+100 50 10 1 10
+1 2
+2 3
+3 4
+1 5
